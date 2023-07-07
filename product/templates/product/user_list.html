@@ -1,0 +1,21 @@
+{# /templates/product/user_list.html #}
+{% load render_table from django_tables2 %}
+{% load static %}
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    {% render_table user_list %}
+    <br><br><br>
+    {% for row in queryset %}
+    <p>Product: {{ row.product }}, Count: {{ row.count }}</p>
+    {% endfor %}
+    <br><br><br>
+
+</body>
+
+</html>

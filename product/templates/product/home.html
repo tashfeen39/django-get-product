@@ -1,0 +1,19 @@
+<form action="{% url 'product:GetMeTheProduct' %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <label>User 1</label> <br><br>
+        <input type="text" name="firstName1" placeholder="First Name"> <br> <br>
+        <input type="text" name="lastName1" placeholder="Last Name"> <br><br>
+        <input type="number" name="number1" placeholder="Number"> <br><br>
+    </fieldset>
+
+    <fieldset>
+        <label>User 2</label> <br><br>
+        <input type="text" name="firstName2" placeholder="First Name"> <br> <br>
+        <input type="text" name="lastName2" placeholder="Last Name"> <br><br>
+        <input type="number" name="number2" placeholder="Number"> <br><br>
+    </fieldset>
+
+    <br>
+    <input type="submit" value="Get Product">
+</form>
